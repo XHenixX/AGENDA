@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const contactList = document.getElementById("contactList");
     const addContactForm = document.getElementById("addContactForm");
-
-    // Función para obtener los contactos y mostrarlos
     function getContacts() {
         fetch("http://www.raydelto.org/agenda.php")
             .then(response => response.json())
             .then(data => {
-                contactList.innerHTML = ''; // Limpiar la lista de contactos
+                contactList.innerHTML = ''; 
                 data.forEach(contact => {
                     const contactItem = document.createElement("div");
                     contactItem.classList.add("contact-item");
@@ -20,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
-    // Función para agregar un nuevo contacto
     addContactForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevenir el envío del formulario
+        event.preventDefault(); 
 
         const nombre = document.getElementById("nombre").value;
         const apellido = document.getElementById("apellido").value;
@@ -44,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             console.log("Contacto agregado:", data);
-            addContactForm.reset(); // Limpiar el formulario
-            getContacts(); // Actualizar la lista de contactos
+            addContactForm.reset(); 
+            getContacts(); 
         })
         .catch(error => {
             console.error("Error al agregar el contacto:", error);
