@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c78e8e;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #976d97;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2f1a30;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #f1e4e7;
+        }
+        .contact-list {
+            margin-top: 20px;
+        }
+        .contact-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container">
+        <h1>Agenda de Contactos</h1>
+        <form id="addContactForm">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required>
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" required>
+
+            <button type="submit">Agregar Contacto</button>
+        </form>
+
+        <div class="contact-list" id="contactList"></div>
+    </div>
+
+    <script src="scripts/agenda.js"></script>
+</body>
+</html>
